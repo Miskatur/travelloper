@@ -12,8 +12,9 @@ body {
   width: var(--global-width);
   margin: 0;
   padding: 0;
-  background-color: transparent; /* Black background */
+  background-color: transparent;
   position: relative;
+  overflow-x: hidden;
 }
 
 body:before {
