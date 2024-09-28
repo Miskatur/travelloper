@@ -4,6 +4,7 @@ import Banner from "./banner/banner";
 import About from "./about/about";
 import Playlist from "./playlist/playlist";
 import { ReactLenis } from "lenis/react";
+import Promotional from "./promotional/promotional";
 const HomePage = () => {
   return (
     <ReactLenis root>
@@ -16,6 +17,9 @@ const HomePage = () => {
           <Playlist />
         </section>
       </main>
+      <section className="  w-full rounded-tr-2xl rounded-tl-2xl ">
+        <Promotional />
+      </section>
     </ReactLenis>
   );
 };
