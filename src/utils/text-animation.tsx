@@ -13,11 +13,12 @@ const containerVariants = {
   },
 };
 const generateVariants = (
-  direction: Direction
+  direction: Direction,
+  as: string
 ): { hidden: Variant; visible: Variant } => {
   const axis = direction === "left" || direction === "right" ? "x" : "y";
   const value = direction === "right" || direction === "down" ? 100 : -100;
-
+  const duration = as === "p" ? 0.05 : 0.4;
   return {
     hidden: { filter: "blur(10px)", opacity: 0, [axis]: value },
     visible: {
@@ -25,7 +26,7 @@ const generateVariants = (
       opacity: 1,
       [axis]: 0,
       transition: {
-        duration: 0.4,
+        duration: duration,
         ease: "easeOut",
       },
     },
@@ -60,7 +61,7 @@ const TextAnimation = ({
   letterAnime?: boolean;
   lineAnime?: boolean;
 }) => {
-  const baseVariants = variants || generateVariants(direction);
+  const baseVariants = variants || generateVariants(direction, as);
   const modifiedVariants = {
     hidden: baseVariants.hidden,
     visible: {
@@ -75,7 +76,7 @@ const TextAnimation = ({
         initial="hidden"
         variants={containerVariants}
         viewport={viewport}
-        className={cn(`block text-black uppercase`, classname)}
+        className={cn(`block text-primary uppercase`, classname)}
       >
         {lineAnime ? (
           <>

@@ -1,6 +1,8 @@
 import React from "react";
 import TextAnimation from "@/utils/text-animation";
 import AboutTitle from "./aboutTitle";
+import Button from "@/components/shared/reusableComponent/button";
+import { motion } from "framer-motion";
 
 const AboutContent = () => {
   return (
@@ -36,12 +38,29 @@ const AboutContent = () => {
               opacity: 1,
               y: 0,
               transition: {
-                duration: 0.2,
+                duration: 0.1,
               },
             },
           }}
         />
       </div>
+      {/* <div className="flex justify-center items-center w-full mt-16">
+        <Button
+          defaultText="Let's make it happen"
+          hoveredText="Need an unfair advantage?"
+        />
+      </div> */}
+      <motion.div
+        initial={{ opacity: 0, y: 50 }} // Start off invisible and lower on the Y-axis
+        animate={{ opacity: 1, y: 0 }} // Animate to full opacity and 0 on the Y-axis
+        transition={{ duration: 0.8, delay: 1.5 }} // Delay of 1.5 seconds to animate after other content
+        className="flex justify-center items-center w-full mt-16"
+      >
+        <Button
+          defaultText="Let's make it happen"
+          hoveredText="Need Your Own Website ?"
+        />
+      </motion.div>
     </div>
   );
 };

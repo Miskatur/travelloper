@@ -2,6 +2,7 @@
 import React from "react";
 import Banner from "./banner/banner";
 import About from "./about/about";
+import Playlist from "./playlist/playlist";
 import { ReactLenis } from "lenis/react";
 const HomePage = () => {
   return (
@@ -11,6 +12,9 @@ const HomePage = () => {
           <Banner />
         </section>
         <About />
+        <section className="mt-20  sticky top-0  bg-primary w-full rounded-tr-2xl rounded-tl-2xl overflow-x-hidden">
+          <Playlist />
+        </section>
       </main>
     </ReactLenis>
   );

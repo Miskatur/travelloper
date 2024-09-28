@@ -11,6 +11,8 @@ const config: Config = {
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
+        primary: "#111827",
+        secondary: "#e5e5e5",
       },
       screens: {
         xs: "350px",
@@ -22,7 +24,6 @@ const config: Config = {
         xxl: "1600px",
         xxxl: "1920px",
       },
-   
     },
   },
   plugins: [],
