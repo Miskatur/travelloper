@@ -1,8 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { Playfair_Display, Lato } from "next/font/google";
-import { NavBar } from "@/components/shared/Header/navbar";
-
 const playfair = Playfair_Display({
   subsets: ["latin"],
   weight: ["400", "700"],
@@ -28,8 +26,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${playfair.variable} ${lato.variable} antialiased`}>
-        <NavBar />
+       
         {children}
+       
       </body>
     </html>
   );

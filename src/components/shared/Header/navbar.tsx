@@ -23,27 +23,23 @@ export const NavBar = () => {
   }, []);
 
   return (
-    <nav className=" bg-slate-950/80">
+    <nav className=" bg-transparent py-4">
       <div className="flex items-center justify-between w-10/12 xxl:w-[1400px] mx-auto px-2 py-2 text-[#e5e5e5] ">
         <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-[#e5e5e5] transition-all duration-200 hover:scale-110">
-          <h2>Travelloper</h2>
+          <h2 className="text-3xl">Travelloper</h2>
         </div>
-        <ul className="hidden items-center justify-between gap-10 md:flex">
+        <ul className="hidden items-center justify-between gap-10 md:flex text-xl">
           <li className="group flex  cursor-pointer flex-col">
             About
-            <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="mt-[2px] h-[3px] w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
           </li>
           <li className="group flex  cursor-pointer flex-col">
             Playlist
-            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
           </li>
           <li className="group flex  cursor-pointer flex-col">
             Blogs
-            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
-          </li>
-          <li className="group flex  cursor-pointer flex-col">
-            Contact
-            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-sky-500 transition-all duration-300 group-hover:w-full"></span>
+            <span className="mt-[2px] h-[3px]  w-[0px] rounded-full bg-secondary transition-all duration-300 group-hover:w-full"></span>
           </li>
         </ul>
         <div

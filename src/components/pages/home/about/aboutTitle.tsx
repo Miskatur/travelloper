@@ -21,6 +21,7 @@ const AboutTitle = () => {
   return (
     <div className="flex  justify-center items-center">
       <TextAnimation
+      as="p"
         text="TRAVELER"
         direction="left"
         lineAnime={true}
@@ -35,6 +36,7 @@ const AboutTitle = () => {
         <X height={72} width={72} className="font-semibold text-primary" />
       </motion.span>
       <TextAnimation
+      as="p"
         text="DEVELOPER"
         direction="right"
         lineAnime={true}

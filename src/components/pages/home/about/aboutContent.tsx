@@ -44,16 +44,11 @@ const AboutContent = () => {
           }}
         />
       </div>
-      {/* <div className="flex justify-center items-center w-full mt-16">
-        <Button
-          defaultText="Let's make it happen"
-          hoveredText="Need an unfair advantage?"
-        />
-      </div> */}
+  
       <motion.div
-        initial={{ opacity: 0, y: 50 }} // Start off invisible and lower on the Y-axis
-        animate={{ opacity: 1, y: 0 }} // Animate to full opacity and 0 on the Y-axis
-        transition={{ duration: 0.8, delay: 1.5 }} // Delay of 1.5 seconds to animate after other content
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }} 
+        transition={{ duration: 0.8, delay: 1.5 }} 
         className="flex justify-center items-center w-full mt-16"
       >
         <Button
