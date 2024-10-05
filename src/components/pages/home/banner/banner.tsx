@@ -1,5 +1,6 @@
 import { NavBar } from "@/components/shared/Header/navbar";
-import { Mouse } from "lucide-react";
+import { Mouse, Linkedin, Youtube, Facebook, CalendarDays } from "lucide-react";
+import moment from "moment";
 import Link from "next/link";
 import React from "react";
 
@@ -25,7 +26,7 @@ const Banner = () => {
             >
               <p className="text-center p-5">View My Album</p>
             </Link>
-            <p className="w-6/12 mt-5">
+            <p className="w-6/12 mt-5 text-xl text-balance">
               As a passionate web developer and digital nomad, I draw
               inspiration from exploring new places. My travels spark
               creativity, allowing me to blend the adventure of travel with the
@@ -34,31 +35,41 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center text-secondary bottom-20 absolute left-[50%] ">
+        <div className="flex flex-col justify-center items-center text-secondary bottom-0 absolute left-[50%] ">
           <Mouse size={40} className="animate-bounce" />
         </div>
       </div>
-      <div className="absolute -left-6 top-72 text-white rotate-90">
-        <div className=" flex items-center justify-center">
-          <p className="">Social Media</p>
-          <div className="w-12  border-b-2 border-secondary mx-2"></div>
+      <div className="absolute left-10 top-56 text-white">
+        <div
+          className="flex flex-row items-center space-y-4"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          <p className="text-lg font-semibold">Follow Us</p>
+          <div className="w-0.5 h-12  bg-secondary"></div>
+          <div className="flex flex-row items-center space-y-2">
+            <Facebook
+              size={32}
+              className="cursor-pointer  transition-all duration-200 hover:bg-secondary hover:text-primary rounded-full px-1.5"
+            />
+            <Linkedin
+              size={32}
+              className="cursor-pointer  transition-all duration-200 hover:bg-secondary hover:text-primary rounded-full px-1.5"
+            />
+            <Youtube
+              size={32}
+              className="cursor-pointer  transition-all duration-200 hover:bg-secondary hover:text-primary rounded-full px-1.5"
+            />
+          </div>
         </div>
       </div>
-      <div className="absolute right-10 top-72 text-white">
-        <ul>
-          <li className="border-b-2 border-secondary px-2 text-lg font-semibold">
-            1
-          </li>
-          <li className="border-b-2 border-secondary px-2 text-lg font-semibold">
-            2
-          </li>
-          <li className="border-b-2 border-secondary px-2 text-lg font-semibold">
-            3
-          </li>
-          <li className="border-b-2 border-secondary px-2 text-lg font-semibold">
-            4
-          </li>
-        </ul>
+      <div className="absolute right-10 top-56 text-white">
+        <p
+          className="text-lg font-semibold flex space-x-2"
+          style={{ writingMode: "vertical-rl" }}
+        >
+          <CalendarDays size={32} className="my-2" />{" "}
+          {moment().format("MMMM Do, YYYY")}
+        </p>
       </div>
     </div>
   );
