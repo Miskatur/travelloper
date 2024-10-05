@@ -2,6 +2,7 @@
 import React from "react";
 import { motion, Variant } from "framer-motion";
 import { cn } from "@/lib/utils";
+
 type Direction = "up" | "down" | "left" | "right";
 
 const containerVariants = {
@@ -12,6 +13,7 @@ const containerVariants = {
     },
   },
 };
+
 const generateVariants = (
   direction: Direction,
   as: string
@@ -34,6 +36,14 @@ const generateVariants = (
 };
 
 const defaultViewport = { amount: 0.3, margin: "0px 0px 0px 0px" };
+
+// Create a map for different motion components
+const MotionMap: { [key: string]: React.ElementType } = {
+  h1: motion.h1,
+  p: motion.p,
+  span: motion.span,
+  div: motion.div,
+};
 
 const TextAnimation = ({
   as = "h1",
@@ -68,7 +78,11 @@ const TextAnimation = ({
       ...baseVariants.visible,
     },
   };
-  const MotionComponent = motion[as as keyof typeof motion];
+
+  // Check if the provided element exists in MotionMap, fallback to div
+  const MotionComponent =
+    MotionMap[as] || motion.div; // Use div if the tag is not in the map
+
   return (
     <>
       <MotionComponent
@@ -79,27 +93,24 @@ const TextAnimation = ({
         className={cn(`block text-primary uppercase`, classname)}
       >
         {lineAnime ? (
-          <>
-            {" "}
-            <motion.span className="inline-block" variants={modifiedVariants}>
-              {text}
-            </motion.span>
-          </>
+          <motion.span className="inline-block" variants={modifiedVariants}>
+            {text}
+          </motion.span>
         ) : (
           <>
             {text.split(" ").map((word: string, index: number) => (
               <motion.span
                 key={index}
-                className={`inline-block `}
+                className="inline-block"
                 variants={letterAnime === false ? modifiedVariants : {}}
               >
                 {letterAnime ? (
                   <>
-                    {word.split("").map((letter: string, index: number) => (
+                    {word.split("").map((letter: string, letterIndex: number) => (
                       <motion.span
-                        className={`inline-block `}
+                        className="inline-block"
                         variants={modifiedVariants}
-                        key={index}
+                        key={letterIndex}
                       >
                         {letter}
                       </motion.span>
