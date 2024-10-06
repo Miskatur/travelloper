@@ -24,6 +24,10 @@ const config: Config = {
         xxl: "1600px",
         xxxl: "1920px",
       },
+      fontFamily: {
+        lato: ["'Lato'", "sans-serif"],
+        playfair_display: ["Playfair Display", "serif"],
+      },
     },
   },
   plugins: [],

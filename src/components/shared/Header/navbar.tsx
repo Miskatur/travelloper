@@ -24,7 +24,7 @@ export const NavBar = () => {
 
   return (
     <nav className=" bg-transparent py-4">
-      <div className="flex items-center justify-between w-10/12 xxl:w-[1400px] mx-auto px-2 py-2 text-[#e5e5e5] ">
+      <div className="flex items-center justify-between w-11/12 xxl:w-[1500px] mx-auto px-2 py-2 text-[#e5e5e5] ">
         <div className="scale-100 cursor-pointer rounded-2xl px-3 py-2 text-xl font-semibold text-[#e5e5e5] transition-all duration-200 hover:scale-110">
           <h2 className="text-3xl">Travelloper</h2>
         </div>

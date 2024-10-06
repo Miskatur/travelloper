@@ -42,3 +42,11 @@ h1, h2, h3 {
 p {
   font-family: var(--font-lato);
 }
+
+
+/* lottie  */
+.lottie-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -5,6 +5,12 @@ import Link from "next/link";
 import React from "react";
 
 const Banner = () => {
+  const scrollToNextSection = () => {
+    const nextSection = document.getElementById("about");
+    if (nextSection) {
+      nextSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div
       className=" h-screen"
@@ -16,7 +22,7 @@ const Banner = () => {
       }}
     >
       <NavBar />
-      <div className="w-10/12 xxl:w-[1400px] mx-auto  py-32 relative">
+      <div className="w-11/12 xxl:w-[1500px] mx-auto  py-32 relative">
         <div className="text-secondary grid place-content-center ">
           <h1 className="text-9xl font-semibold text-center">Travelloper</h1>
           <div className="flex  justify-center gap-x-5 ">
@@ -35,7 +41,10 @@ const Banner = () => {
           </div>
         </div>
 
-        <div className="flex flex-col justify-center items-center text-secondary bottom-0 absolute left-[50%] ">
+        <div
+          className="flex flex-col justify-center items-center text-secondary bottom-0 absolute left-[50%] cursor-pointer"
+          onClick={scrollToNextSection}
+        >
           <Mouse size={40} className="animate-bounce" />
         </div>
       </div>

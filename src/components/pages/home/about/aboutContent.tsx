@@ -10,6 +10,7 @@ const AboutContent = () => {
       <AboutTitle />
       <div className="text-center pt-8 ">
         <TextAnimation
+          as="p"
           lineAnime={false}
           letterAnime={true}
           text="I'm Miskatur Rahman, a Software Developer and  Traveler."
@@ -44,11 +45,11 @@ const AboutContent = () => {
           }}
         />
       </div>
-  
+
       <motion.div
         initial={{ opacity: 0, y: 50 }}
-        animate={{ opacity: 1, y: 0 }} 
-        transition={{ duration: 0.8, delay: 1.5 }} 
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 1.5 }}
         className="flex justify-center items-center w-full mt-16"
       >
         <Button

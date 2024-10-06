@@ -10,7 +10,7 @@ const Playlist = () => {
       <h2 className="text-4xl 2xl:text-7xl font-bold text-center tracking-wide py-5 text-secondary">
         Our Travel Stories
       </h2>
-      <div className=" py-10 md:columns-3 w-10/12 xxl:w-[1400px] mx-auto overflow-hidden">
+      <div className=" py-10 md:columns-3 w-11/12 xxl:w-[1500px] mx-auto overflow-hidden">
         {PlayListData.map((item, index) => (
           <ScrollElement
             key={index}
